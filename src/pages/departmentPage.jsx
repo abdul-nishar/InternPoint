@@ -14,7 +14,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 import Header from "../components/defaultHeader";
 import Pagination from "../components/pagination";
-import Footer from "../components/defaultFooter";
+import FooterWrapper from "../components/defaultFooter";
 
 export default function DepartmentPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -97,7 +97,7 @@ export default function DepartmentPage() {
   };
 
   return (
-    <>
+    <FooterWrapper>
       <Header />
       <Heading mt="3rem" ml="10%" mb="2rem">
         IIT MADRAS
@@ -137,8 +137,6 @@ export default function DepartmentPage() {
         itemsPerPage={10}
         onPageChange={handlePageChange}
       />
-
-      <Footer />
-    </>
+    </FooterWrapper>
   );
 }

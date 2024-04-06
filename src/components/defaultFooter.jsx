@@ -2,9 +2,12 @@ import { Flex, Link, Icon, Spacer, Text } from "@chakra-ui/react";
 import { FaLinkedin, FaYoutube, FaTwitter, FaFacebook } from "react-icons/fa";
 import React from "react";
 
-export default function Footer() {
+export default function FooterWrapper({ children }) {
   return (
-    <>
+    <Flex direction="column" minHeight="100vh" justify="space-between">
+      <Flex direction="column" flex="1">
+        {children}
+      </Flex>
       <Flex align="center" justify="end" pt={4} mb={1}>
         <Link href="https://www.twitter.com/" isExternal mx={2}>
           <Icon as={FaTwitter} boxSize={4} color="#2EBAE8FF" />
@@ -45,6 +48,6 @@ export default function Footer() {
           Terms
         </Link>
       </Flex>
-    </>
+    </Flex>
   );
 }
