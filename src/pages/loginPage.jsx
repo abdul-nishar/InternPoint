@@ -16,11 +16,11 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import DefaultModal from "./defaultModal";
-import DefaultButton from "../defaultButton";
-import { GoogleIcon } from "../icons";
+import DefaultModal from "../components/modals/defaultModal";
+import DefaultButton from "../components/defaultButton";
+import { GoogleIcon } from "../components/icons";
 
-export default function LoginModal() {
+export default function LoginPage() {
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
 
@@ -62,14 +62,7 @@ export default function LoginModal() {
                 </Link>
               </Checkbox>
             </Stack>
-            <DefaultButton
-              width="100%"
-              background="#1F1C1CFF"
-              my="4px"
-              _hover={{
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.5)",
-              }}
-            >
+            <DefaultButton width="100%" my="4px">
               Login
             </DefaultButton>
             <Box
